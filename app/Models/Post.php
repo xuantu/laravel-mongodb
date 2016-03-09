@@ -1,10 +1,10 @@
 <?php
 
-namespace CMS;
+namespace CMS\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Test extends Eloquent
+class Post extends Eloquent
 {
     protected $collection = 'posts';
 }

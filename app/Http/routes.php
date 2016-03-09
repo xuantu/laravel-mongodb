@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/savetest', "PostsController@test")->name("savetest");
+Route::get('/savetest', "PostsController@save")->name("savepost");
 
 
 /*
@@ -32,4 +32,9 @@ Route::get('/savetest', "PostsController@test")->name("savetest");
 
 Route::group(['middleware' => ['web']], function () {
     //
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
 });

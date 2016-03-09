@@ -1,8 +1,8 @@
 <?php
 
-namespace CMS;
+namespace CMS\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use CMS\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
