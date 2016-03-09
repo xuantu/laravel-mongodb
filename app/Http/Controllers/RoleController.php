@@ -17,6 +17,6 @@ class RoleController extends Controller
 
     public function edit($id)
     {
-        print_r($id);die;
+        return view('admin.role.edit', ['role' => Role::find($id)]);
     }
 }
