@@ -14,11 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::get('/savetest', "PostsController@save")->name("savepost");
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -29,11 +24,6 @@ Route::get('/savetest', "PostsController@save")->name("savepost");
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
-Route::group(['middleware' => ['web']], function () {
-    //
-});
-
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/home', 'HomeController@index');

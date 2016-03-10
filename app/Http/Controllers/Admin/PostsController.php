@@ -1,13 +1,14 @@
 <?php
 
-namespace CMS\Http\Controllers;
+namespace CMS\Http\Controllers\Admin;
 
+use CMS\Base\Controllers\AdminController;
 use CMS\Models\Post;
 use Illuminate\Http\Request;
 
 use CMS\Http\Requests;
 
-class PostsController extends Controller
+class PostsController extends AdminController
 {
     function save()
     {

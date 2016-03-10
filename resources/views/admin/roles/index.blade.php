@@ -28,13 +28,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach ($role as $r)
+                            @foreach ($roles as $role)
                                 <tr>
-                                    <td><input type="checkbox" class="checkitem" name="data[Choose][]" value="{{$r->_id}}"/></td>
-                                    <td><a href="{{ URL::route("admin.role.edit", array('role' => $r->_id)) }}">{{$r->_id}}</a></td>
-                                    <td><a href="{{ URL::route("admin.role.edit", array('role' => $r->_id)) }}">{{$r->name}}</a></td>
-                                    <td>{{$r->display_name}}</td>
-                                    <td>{{$r->created_at}}</td>
+                                    <td><input type="checkbox" class="checkitem" name="data[Choose][]" value="{{$role->_id}}"/></td>
+                                    <td><a href="{{ URL::route("admin.roles.edit", array('role' => $role->_id)) }}">{{$role->_id}}</a></td>
+                                    <td><a href="{{ URL::route("admin.roles.edit", array('role' => $role->_id)) }}">{{$role->name}}</a></td>
+                                    <td>{{$role->display_name}}</td>
+                                    <td>{{$role->created_at}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

@@ -8,15 +8,16 @@ use Illuminate\Http\Request;
 use CMS\Http\Requests;
 use Illuminate\Support\Facades\Input;
 
-class RoleController extends AdminController
+class RolesController extends AdminController
 {
     public function index()
     {
-        return view('admin.role.index', ['role' => Role::all()]);
+        return view('admin.roles.index', ['roles' => Role::all()]);
     }
 
     public function edit($id)
     {
-        return view('admin.role.edit', ['role' => Role::find($id)]);
+        $role = Role::find($id);
+        $this->getForm($role);
     }
 }

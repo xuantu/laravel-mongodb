@@ -9,7 +9,7 @@
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['web']], function () {
 
     Route::get('/', 'DashboardController@index')->name('admin.index');
-    Route::resource('roles', 'RoleController');
+    Route::resource('roles', 'RolesController');
     Route::resource('users', 'UsersController');
 
 });
