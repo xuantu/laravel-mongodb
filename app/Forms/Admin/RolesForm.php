@@ -12,13 +12,13 @@ class RolesForm extends AdminForm
         // Add fields here...
         $this
             ->add('name', 'text', [
-                'label' => trans('admin.fields.user.name')
+                'label' => trans('admin.fields.role.name')
             ])
             ->add('display_name', 'text', [
-                'label' => trans('admin.fields.user.email')
+                'label' => trans('admin.fields.role.display_name')
             ])
-            ->add('description', 'text', [
-                'label' => trans('admin.fields.user.password')
+            ->add('description', 'textarea', [
+                'label' => trans('admin.fields.role.description')
             ]);
         parent::buildForm();
     }

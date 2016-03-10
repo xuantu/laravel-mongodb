@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use CMS\Http\Requests;
 
-class Permissions extends AdminController
+class PermissionsController extends AdminController
 {
     //
 }

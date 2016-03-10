@@ -80,6 +80,11 @@ return [
             "password" => "Password",
             "password_confirmation" => "Password Confirmation",
             "picture" => "Avatar"
+        ],
+        "role" => [
+            "name" => "Name",
+            "display_name" => "Display Name",
+            "description" => "Description",
         ]
     ],
 ];
