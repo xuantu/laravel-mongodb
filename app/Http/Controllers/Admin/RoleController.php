@@ -1,14 +1,14 @@
 <?php
 
-namespace CMS\Http\Controllers;
+namespace CMS\Http\Controllers\Admin;
 
+use CMS\Base\Controllers\AdminController;
 use CMS\Models\Role;
 use Illuminate\Http\Request;
-
 use CMS\Http\Requests;
 use Illuminate\Support\Facades\Input;
 
-class RoleController extends Controller
+class RoleController extends AdminController
 {
     public function index()
     {

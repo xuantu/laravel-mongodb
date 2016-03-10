@@ -159,6 +159,9 @@ return [
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         Zizaco\Entrust\EntrustServiceProvider::class,
+
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -207,6 +210,12 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+
+
+        'Form' => Collective\Html\FormFacade::class,
+        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
+        'Menu' => Caffeinated\Menus\Facades\Menu::class,
     ],
 
 ];
