@@ -8,9 +8,8 @@
 
 namespace CMS\Models;
 
-
-use Zizaco\Entrust\EntrustRole;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+
 class Role extends Eloquent
 {
     protected $collection = 'roles';

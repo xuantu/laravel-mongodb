@@ -33,7 +33,11 @@
                                     <td><input type="checkbox" class="checkitem" name="data[Choose][]" value="{{$role->_id}}"/></td>
                                     <td><a href="{{ URL::route("admin.roles.edit", array('role' => $role->_id)) }}">{{$role->_id}}</a></td>
                                     <td><a href="{{ URL::route("admin.roles.edit", array('role' => $role->_id)) }}">{{$role->name}}</a></td>
-                                    <td>{{$role->display_name}}</td>
+                                    <td>
+                                        <a href="{{ URL::route("admin.roles.edit", array('role' => $role->_id)) }}">
+                                            {{$role->display_name}}
+                                        </a>
+                                    </td>
                                     <td>{{$role->created_at}}</td>
                                 </tr>
                             @endforeach
