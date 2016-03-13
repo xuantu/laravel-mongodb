@@ -2,6 +2,7 @@
 
 namespace CMS;
 
+use Illuminate\Support\Facades\Hash;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 use CMS\Auth\User as Authenticatable;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
@@ -11,8 +12,6 @@ class User extends Authenticatable
     use EntrustUserTrait;
 
     /**
-     * The attributes that are mass assignable.
-     *
      * @var array
      */
     protected $fillable = [
@@ -20,11 +19,23 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes excluded from the model's JSON form.
-     *
      * @var array
      */
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * @var array
+     */
+    protected $dates = ['logged_in_at', 'logged_out_at'];
+
+
+    /**
+     * @param $password
+     */
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = Hash::make($password);
+    }
 }

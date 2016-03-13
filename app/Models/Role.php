@@ -13,4 +13,6 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Role extends Eloquent
 {
     protected $collection = 'roles';
+
+    protected $fillable = array('_method', '_token', 'name', 'display_name', 'description');
 }

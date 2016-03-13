@@ -11,5 +11,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['web
     Route::get('/', 'DashboardController@index')->name('admin.index');
     Route::resource('roles', 'RolesController');
     Route::resource('users', 'UsersController');
-
+    Route::resource('permissions', 'PermissionsController');
 });

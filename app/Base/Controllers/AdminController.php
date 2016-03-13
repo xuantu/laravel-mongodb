@@ -8,9 +8,11 @@
 
 namespace CMS\Base\Controllers;
 
+use CMS\Base\Services\ImageService;
 use CMS\Http\Controllers\Controller;
 use CMS\Models\Language;
 use Kris\LaravelFormBuilder\Facades\FormBuilder;
+use Laracasts\Flash\Flash;
 
 abstract class AdminController extends Controller
 {
