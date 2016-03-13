@@ -14,4 +14,6 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Permission extends Eloquent
 {
     protected $collection = 'permissions';
+
+    protected $fillable = array('_method', '_token', 'name', 'display_name', 'description');
 }

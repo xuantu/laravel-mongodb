@@ -8,6 +8,10 @@
 
 
 return [
+    "update" => [
+        "fail" => "Update operation on resource has failed.",
+        "success" => "Resource has been updated succesfully."
+    ],
     "fields" => [
         "article" => [
             "category_id" => "Category",

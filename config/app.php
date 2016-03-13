@@ -162,6 +162,8 @@ return [
 
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+
+        Laracasts\Flash\FlashServiceProvider::class
     ],
 
     /*
@@ -211,7 +213,7 @@ return [
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Entrust' => Zizaco\Entrust\EntrustFacade::class,
 
-
+        'Flash' => Laracasts\Flash\Flash::class,
         'Form' => Collective\Html\FormFacade::class,
         'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
         'HTML' => Collective\Html\HtmlFacade::class,
