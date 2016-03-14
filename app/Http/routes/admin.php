@@ -6,7 +6,7 @@
  * Time: 17:53
  */
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['web']], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     Route::get('/', 'DashboardController@index')->name('admin.index');
     Route::resource('roles', 'RolesController');

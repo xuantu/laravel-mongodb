@@ -10,7 +10,11 @@ use CMS\Http\Requests;
 
 class UsersController extends AdminController
 {
+    /**
+     * @var string
+     */
     private $imageColumn = "avatar";
+
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -31,7 +35,7 @@ class UsersController extends AdminController
 
     /**
      * @param $id
-     * @param Request $request
+     * @param Requests\UserRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update($id, Request $request)

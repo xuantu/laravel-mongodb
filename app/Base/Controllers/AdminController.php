@@ -112,8 +112,6 @@ abstract class AdminController extends Controller
     }
 
     /**
-     * Save, flash success or error then redirect
-     *
      * @param $model
      * @param $request
      * @param bool|false $imageColumn
@@ -122,7 +120,8 @@ abstract class AdminController extends Controller
      */
     public function saveFlashRedirect($model, $request, $imageColumn = false, $path = "index")
     {
-        $model->fill($this->getData($request, $imageColumn));
+        $data = $this->getData($request, $imageColumn);
+        $model->fill($data);
         $model->save() ? Flash::success(trans('admin.update.success')) : Flash::error(trans('admin.update.fail'));
         return $this->redirectRoutePath($path);
     }

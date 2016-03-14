@@ -158,8 +158,6 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
-        Zizaco\Entrust\EntrustServiceProvider::class,
-
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
@@ -211,7 +209,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-        'Entrust' => Zizaco\Entrust\EntrustFacade::class,
 
         'Flash' => Laracasts\Flash\Flash::class,
         'Form' => Collective\Html\FormFacade::class,

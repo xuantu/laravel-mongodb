@@ -3,14 +3,11 @@
 namespace CMS;
 
 use Illuminate\Support\Facades\Hash;
-use Zizaco\Entrust\Traits\EntrustUserTrait;
 use CMS\Auth\User as Authenticatable;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class User extends Authenticatable
 {
-    use EntrustUserTrait;
-
     /**
      * @var array
      */
